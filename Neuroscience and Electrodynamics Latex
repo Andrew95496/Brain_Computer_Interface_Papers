@@ -1,0 +1,72 @@
+\documentclass[english]{def}
+
+\titulo{ACTION POTENTIALS TO BITS}
+          
+
+\title{Neuroscience and Electrodynamics}
+
+
+\author{Andrew Leacock
+}
+
+
+\begin{document}
+
+\maketitle
+
+
+
+\englishtitle
+
+\begin{abstract}
+	This series of paper will document my growth in the field of Brain Computer Interfaces (BCI). This paper will document my research from April 7\textsuperscript{th}, 2022 - April 14\textsuperscript{th}, 2022. It will cover neurons, electrical signals, and electrodynamics.
+\end{abstract}
+
+\begin{keywords}
+	Action potential, Axons, Cerebral Cortex, Glial cells, Goldman equation, Neurons, Vector Analysis
+\end{keywords}
+
+\let\thefootnote\relax\footnotetext{\hspace*{-5mm}}
+
+\section*{GOLDMAN EQUATION}
+\[ E_{m}={\frac {RT}{F}}\ln {\left({\frac {\sum _{i}^{n}P_{M_{i}^{+}}[M_{i}^{+}]_{\mathrm {out} }+\sum _{j}^{m}P_{A_{j}^{-}}[A_{j}^{-}]_{\mathrm {in} }}{\sum _{i}^{n}P_{M_{i}^{+}}[M_{i}^{+}]_{\mathrm {in} }+\sum _{j}^{m}P_{A_{j}^{-}}[A_{j}^{-}]_{\mathrm {out} }}}\right)}\]
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Seções
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+% Introdução
+\section{NEURONS}
+The cells in the nervous system can be divided into two groups nerve cells \textbf{(neurons)} and supporting cells. Neurons are specialized cells for \emph{transporting electrical signals} throughout the body. Supporting cells are not capable of transporting electrical signals. In terms of structure neurons are pretty similar to other cells containing a nucleus, mitochondria, ribosomes, etc. What differentiates neurons from other cells in the body are the presence of \textbf{dendrites} and an \textbf{axon}. Dendrites are \emph{branch like structures that arise from the cell body}. The Axon is \emph{where \textbf{action potentials} are generated and where input from the dendrites are read out}. The geometry of neurons range across a spectrum from a cell body with an axon, to a neurons with hundreds of dendrites. The number of inputs a single neuron can receive range from 1 to about 100,000. The axonal mechanism that carries signals across the body are what action potentials are. Information encoded in the action potential are passed on by the \textbf{synaptic transmission}. The information gets sent to the target cells such as other neurons in the brain, spinal cord, muscles, etc. 
+
+\subsection{NEUROGLIAL CELLS}
+
+\footnotetext{Myelin affect the speed of action potential conduction}
+
+\textbf{Glial cells} do not carry electrical signals but some of there supportive function help maintain the electrical signaling of neurons.
+Glia are smaller than neurons and do not have dendrites or axons.\\\\
+3 types of glial cells:\\\\
+\textbf{Astrocytes} located in the brain and spinal cord, maintain the chemical environment neuronal signaling.\\
+\textbf{Oligodendrocyte}located in the central nervous system, lay a laminated wrapping called \textbf{myelin} around some of the axons .\\
+\textbf{Microglial} located in the central nervous system, help repair nerve damage.\\
+
+
+%Body Text
+\section{ELECTRICAL SIGNALS}
+
+Naturally neurons are not good conductors of electrical signals. Neurons have evolved complex mechanisms for generating electrical signals based on the flow of ions across their plasma membranes. Usually a neuron generates a negative potential called the \textbf{resting membrane potential}. The action potential is what makes the transmembrane temporarily positive. Action potentials propagate along the length of the axon and is the fundamental  electrical signal of the axon. The resting potential and action potential show the selective permeability of neurons.  
+
+
+
+
+
+
+\begin{thebibliography}{9}
+\bibitem{texbook}
+Purves, D., Augustine, G. J., Fitzpatrick, D., Hall, W. C., LaMantia, A.-S., \& White, L. E. (2012) \emph{Neuroscience}, Sinauer Associates, Publishers.
+\end{thebibliography}
+
+
+
+
+\end{document}
