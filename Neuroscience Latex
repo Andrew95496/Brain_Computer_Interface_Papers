@@ -1,0 +1,223 @@
+\documentclass[english]{def}
+\usepackage[utf8]{inputenc}
+
+
+
+\title{THE NEURAL GARAGE COMPANY\\\small{WEEK 1}}
+
+\author{Andrew Leacock}
+
+
+\begin{document}
+
+\maketitle
+
+
+
+\englishtitle
+
+\begin{abstract}
+	This series of paper will document my growth in the field of Brain Computer Interfaces (BCI). This paper will document my research from April 18\textsuperscript{th}, 2022 - April 24\textsuperscript{th}, 2022. It will cover neurons, electrical signals, and Coulomb’s Law.
+\end{abstract}
+
+\begin{keywords}
+	Action potential, Axons, Glial cells, Goldman equation, Neurons, Regression, Classification
+\end{keywords}
+
+\let\thefootnote\relax\footnotetext{\hspace*{-5mm}}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Seções
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+% Introdução
+\section{NEURONS}
+The cells in the nervous system can be divided into two groups nerve cells \textbf{(neurons)} and supporting cells. Neurons are specialized cells for \emph{transporting electrical signals} throughout the body. Supporting cells are not capable of transporting electrical signals. In terms of structure neurons are pretty similar to other cells containing a nucleus, mitochondria, ribosomes, etc. What differentiates neurons from other cells in the body are the presence of \textbf{dendrites} and an \textbf{axon}. Dendrites are \emph{branch like structures that arise from the cell body}. The Axon is \emph{where \textbf{action potentials} are generated and where input from the dendrites are read out}. The geometry of neurons range across a spectrum from a cell body with an axon, to a neurons with hundreds of dendrites. The number of inputs a single neuron can receive range from 1 to about 100,000. The axonal mechanism that carries signals across the body are what action potentials are. Information encoded in the action potential are passed on by the \textbf{synaptic transmission}. The information gets sent to the target cells such as other neurons in the brain, spinal cord, muscles, etc. 
+
+\subsection{NEUROGLIAL CELLS}
+
+\footnotetext{Myelin affect the speed of action potential conduction}
+
+\textbf{Glial cells} do not carry electrical signals but some of there supportive function help maintain the electrical signaling of neurons.
+Glia are smaller than neurons and do not have dendrites or axons.\\\\
+3 types of glial cells:
+
+\subsubsection{\textbf{Astrocytes}} located in the brain and spinal cord, maintain the chemical environment neuronal signaling.
+\subsubsection{\textbf{Oligodendrocyte}} located in the central nervous system, lay a laminated wrapping called \textbf{myelin} around some of the axons.
+\subsubsection{\textbf{Microglial}}  located in the central nervous system, help repair nerve damage.
+
+%Body Text
+\section{ELECTRICAL SIGNALS}
+
+Naturally neurons are not good conductors of electrical signals. Neurons have evolved complex mechanisms for generating electrical signals based on the flow of ions across their plasma membranes. Usually a neuron generates a negative potential called the \textbf{resting membrane potential}. The action potential is what makes the trans-membrane temporarily positive. Action potentials propagate along the length of the axon and is the fundamental  electrical signal of the axon. The resting potential and action potential show the selective permeability of neurons.
+
+\subsection{ELECTRICAL POTENTIALS}
+Neurons are not good electrical conductors in order to make up for that deficiency neurons use action potentials to boost the electrical spike of the neuron. \textbf{Micro-electrodes} are used to record the electrical potential across the plasma membrane. Neurons generate a constant negative voltage when at rest which is called the resting membrane potential. Depending on the neuron being examined the voltage will typically be from -40 to 90 mV.
+To elicit an action potential in the laboratory you would insert a second micro-electrode and connect it to a battery. If the charge sent through the battery causes the membrane to be more than the \textbf{threshold potential} an action potential will occur. Action potentials last for about 1 ms. Larger currents do not elicit larger action potentials. If the amplitude or duration of a current is increased sufficiently, multiple action potentials occur. 
+
+\subsection{IONIC MOVEMENTS}
+Electrical potentials occur across neuronal membranes because of the the different concentration of specific ions across the neuronal membrane and because the membranes are selectively permeable. Those two reason are because of two kinds of protein  in the cell membrane. The two proteins are \textbf{ion pumps} and \textbf{ion channels}. With the ion pumps and ion channels working together it creates cellular electricity. Ions move down their concentration gradient and electrical gradient. The greater the concentration the stronger the push. Ions will flow to the stronger gradient. The equilibrium potential of an ion determines its influence on the membrane potential.
+
+\subsection{FORCES}
+The electrical potential generated across the membrane during \textbf{Electrochemical equilibrium} also called \textbf{equilibrium potential}, can be predicted with the \textbf{Nernst equation}.
+
+\[E_x= \frac{R T}{z F} \ln \frac{[X]_{out}}{[X]_{in}}\]
+
+\noindent\textbf{E} = equilibrium potential for any ion X\\
+\textbf{R} = the universal gas constant (8.314 J/K mol)\\
+\textbf{T} = absolute temperature in Kelvin\\
+\textbf{z} = valence of the permeant ion\\
+\textbf{F} = Faraday constant the amount of electrical charge in a mole of a univalent ion (96485.3321 C / mol)\\\\
+
+There is another equation for a more complex ion environment such as when the different types of ion are not distributed equally. In this case it depends on relative permeability. If the membrane is more permeable to $K^+$\footnote{$K^+$ = Potassium} the potential approaches -58 mV. If the membrane is more permeable to $Na^+$\footnote{$Na^+$ = Sodium} the potential approaches +58 mV. For this we use the \textbf{Goldman equation}.
+
+\[ V={\frac {RT}{F}}\ln {\left({\frac {\sum _{i}^{n}P_{M_{i}^{+}}[M_{i}^{+}]_{\mathrm {out} }+\sum _{j}^{m}P_{A_{j}^{-}}[A_{j}^{-}]_{\mathrm {in} }}{\sum _{i}^{n}P_{M_{i}^{+}}[M_{i}^{+}]_{\mathrm {in} }+\sum _{j}^{m}P_{A_{j}^{-}}[A_{j}^{-}]_{\mathrm {out} }}}\right)}\]
+
+\noindent\textbf{V} = voltage across the membrane\\
+\textbf{P} = permeability of the membrane to each ion of interest\\
+
+\section{MACHINE LEARNING}
+
+\emph{ "The field of study that gives computers the ability to learn without being explicitly programmed."}--Arthur Samuel
+\\\\
+\emph{"A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E."}--Tom Mitchell\\
+\\
+Example:\\
+E = the experience of playing many games of checkers
+\\
+T = the task of playing checkers.
+\\
+P = the probability that the program will win the next game.
+\\\\
+\textbf{TYPES OF MACHINE LEARNING} 
+\subsubsection{Supervised Learning} A training set of examples with correct targets are provided.
+\subsubsection{Unsupervised Learning} Correct targets are not provided, but the algorithm tries to identify similarities between inputs and categorizes them together. 
+\subsubsection{Reinforcement Learning} The algorithm gets told when the target is incorrect but not how to fix it. The algorithm as to workout the correct answer on its own. 
+\subsubsection{Evolutionary Learning} Gives the current solution to an input a score based on how good it is. 
+
+\subsection{SUPERVISED LEARNING}
+Algorithms should be able to be accurate even if it encounters data that was not in the test sets or \textbf{noise} (small inaccuracies) in the data. 
+
+\subsubsection{Regression}
+Creates a function from a given set of values.The challenge is figuring out which function to chose. An algorithm can interpolate the data and see which values come closest to the predicted values.
+\[y = B_0 + B_1x\]
+
+\subsubsection{Classification}
+Takes input vectors and decides which of N classes the input belongs to. The outputs are discrete, each vector belongs to exactly one class. There are classifiers called fuzzy classifiers.When choosing features for your classifier you do not want to increase the dimensionality of the input vectors too much because this will slow down the classifier, however too little dimensionality and the classifier will not be very reliable. 
+
+% \section{VECTOR ANALYSIS}
+
+% A \textbf{vector} has a direction and a magnitude(length) such as velocity, acceleration, force, momentum, etc. A \textbf{scalar} has a magnitude but no direction such as mass, charge, density, temperature, etc. The are two ways to multiply vectors cross Product and dot Product. The products of dot products are scalars and the products of cross product are vectors.
+
+% \captionof*{figure}{\centering{Dot Product}}
+% \[\hat{a} + \hat{b} = c\]
+
+% \captionof*{figure}{\centering{Cross Product}}
+% \[\hat{a} + \hat{b} = \hat{c}\]
+
+% In electrodynamics you will frequently encounter problems involving a \textbf{source point r'}, where an electric charge is located \emph{q}, and a \textbf{field point r}, at which you are calculating the electric field \emph{Q}. The vector that is the vector from the source point to the field point is called the \textbf{separation vector} (\textbf{sv}).
+
+% \captionof*{figure}{\centering{Standard}}
+% \[\textbf{sv} = r - r'\]
+
+% \captionof*{figure}{\centering{Magnitude}}
+% \[sv = |r - r'|\]
+
+% If \emph{q} and \emph{Q} have the same sign the force is repulsive, and attractive if the signs are the opposite. 
+
+% \section{ELECTROSTATICS}
+
+% The fundamental problem of electrodynamics is to solve what some forces do some charges exert on another. The solution to this problem is facilitated by the \textbf{principle of superposition}, which states that the interaction between any two charges is completely unaffected by the presence of others. We will start with \textbf{electrostatics} where all source charges are stationary.
+% \[ \textbf{F}_{Q} = \sum \textbf{F}_{QI}\]
+% \footnote{F = Force}
+
+%  \subsection{COULOMB'S LAW}
+ 
+%  Coulomb's law answers, what is the force on a test charge \emph{Q} due to a single point charge \emph{q}, that is at rest a distance \textbf{sv} away.
+ 
+ 
+ 
+%  \captionof*{figure}{\centering{Into to Electrodynamics Book}}
+% \[\textbf{F}=\frac{1}{4\pi\epsilon_{0}}\frac{\emph{q}\emph{Q}}{sv^2}\textbf{\textbf{$\hat{sv}$}}\]
+ 
+%  \captionof*{figure}{\centering{Wikipedia}}
+%  \[\textbf{F}=k_{e}{\frac {q_{1}q_{2}}{r^{2}}}\]
+ 
+ 
+
+
+
+
+% ---------------------------------------------------------------------------------------------------------
+\section*{GLOSSARY}
+\noindent\textbf{Action Potentials} are a when the neuronal membranes temporarily shifts from positive to negative\\
+
+\noindent\textbf{Axon} is where action potentials are generated and where input from the dendrites are read out\\
+
+\noindent\textbf{Dendrites} are branch like structures that arise from the cell body\\\\
+
+\noindent\textbf{Electrochemical Equilibrium} is when the chemical and electrical gradients are equal in magnitude\\
+
+\noindent\textbf{Equilibrium Potential} is the electrical potential generated across the membrane
+during Electrochemical equilibrium\\
+
+\noindent\textbf{Glial Cells} provide support for neurons and help with electrical signaling\\
+
+\noindent\textbf{Goldman equation} is an equation used to calculate the electrical equilibrium potential across the cell's membrane in the presence of more than one ions taking into account the selectivity of membrane's permeability\\
+
+\noindent\textbf{Ion Channels} allows certain kind of ions move across the membrane in the direction of their concentration gradients\\
+
+\noindent\textbf{Ion Pumps} moves ions in and out of cells based on their concentration gradients\\
+
+\noindent\textbf{Micro-Electrodes} small electrodes used to measure electrical signals\\
+
+\noindent\textbf{Myelin} is an insulating layer, or sheath that forms around nerves, including those in the brain and spinal cord\\
+
+\noindent\textbf{Nernst Equation} is often used to calculate the cell potential of an electrochemical cell at any given temperature, pressure, and reactant concentration\\
+
+\noindent\textbf{Neurons} are cells of the nervous system\\
+
+\noindent\textbf{Noise} is small inaccuracies in the data during machine learning\\
+
+
+\noindent\textbf{Resting Membrane Potential} resting charge of the neuronal membrane\\
+
+\noindent\textbf{Synaptic Transmission} is when a neuron communicates with a target cell across a synapse\\
+
+\noindent\textbf{Threshold Potential} is what the neuronal membrane has to go above in order to trigger an action potential\\
+
+% -------------------------------------------------------------------------------------------
+\begin{thebibliography}{9}
+
+
+\bibitem{}
+Kandel, E. R., Schwartz, J. H., \& Jessell, T. M. (1991). \emph{Principles of Neural Science. Elsevier}. Columbia University 
+
+\bibitem{}
+Klabunde, E, Richard PhD. (n.d.). (2022) \emph{Action potentials. Image for Cardiovascular Physiology Concepts} https://www.cvphysiology.com/Arrhythmias
+
+\bibitem{}
+Marsland, S. (2015).\emph{Machine learning: An algorithmic perspective}. CRC Press. 
+
+\bibitem{}
+Pete Meighan. (2019). \emph{The Nernst Equation and Equilibrium Potentials in Physiology}. YouTube. https://youtu.be/ZVUWyDzmApg
+
+\bibitem{}
+Physics, Real. (2015). \emph{Introduction to Electrodynamics}. YouTube. https://youtube.com/playlist?list=PLDDEED00333C1C30E 
+
+\bibitem{}
+Purves, D., Augustine, G. J., Fitzpatrick, D., Hall, W. C., LaMantia, A.-S., \& White, L. E. (2012) \emph{Neuroscience}, Sinauer Associates, Publishers.
+
+ 
+
+
+
+
+
+
+\end{thebibliography}
+
+
+
+
+\end{document}
